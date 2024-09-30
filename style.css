@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body{
+    background-color: #edf2f8;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1500px;
+    margin-inline: auto;
+    padding:100px 20px;
+    
+}
+
+.box{
+    color: white;
+    min-height: 300px;
+    border-radius: 10px;
+    box-shadow:0px 0px 15px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}
+
+.box img{
+    border-radius: 50%;
+}
+
+.box .profile{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.name, .graduate{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.name-1, .graduate-1{
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+}
+
+.graduate{
+    opacity: 0.5;
+}
+.graduate-1{
+    opacity: 0.5;
+    color: black;
+}
+
+.head{
+    padding-block: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 5;
+}
+.head-1{
+    padding-block: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #454d58;
+}
+
+.desc{
+    opacity: 0.5;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    position: relative;
+    z-index: 5;
+    
+}
+
+.desc-1{
+    opacity: 0.5;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #454d58;
+    font-weight: 600;
+}
+
+.about{
+    padding-left: 20px;
+}
+.about-1{
+    padding-left: 20px;
+    color: #454d58;
+}
+
+.box-1{
+    background-color: hsl(263, 55%, 52%);
+    grid-column-start: span 2;
+    position: relative;
+    z-index: 3;
+}
+
+.test{
+    position: absolute;
+    top: 0%;
+    right: 16%;
+    z-index: 1;
+}
+
+.box-2{
+    background-color: hsl(217, 19%, 35%);
+}
+.box-3{
+    background-color: hsl(0, 0%, 100%);
+    grid-row-start: span 2;
+}
+.box-4{
+    background-color: hsl(0, 0%, 100%);
+}
+.box-5{
+    background-color: hsl(219, 29%, 14%);
+    grid-column-start: span 2;
+}
+
+@media (max-width:900px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box{
+        min-height: 200px;
+    }
+}
+
+@media (max-width:375px){
+    .container{
+        grid-template-columns:1fr;
+        grid-template-rows:1fr;
+        gap: 1.5rem 0px;
+    }
+    .box-1{
+        grid-row-start: 1;
+    }
+    .box-2{
+        grid-row-start: 2;
+    }
+    .box-3{
+        grid-row-start: 3;
+    }
+    .box-4{
+        grid-row-start: 4;
+    }
+    .box-5{
+        grid-row-start: 5;
+    }
+}
